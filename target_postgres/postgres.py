@@ -402,7 +402,7 @@ class PostgresTarget(SQLInterface):
         if not identifier:
             identifier = '_'
 
-        return re.sub(r'[^\w\d_$]', '_', identifier.lower())
+        return re.sub(r'[^\w\d_$]', '_', identifier)
 
     def add_key_properties(self, cur, table_name, key_properties):
         if not key_properties:
